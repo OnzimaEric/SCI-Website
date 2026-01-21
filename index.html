@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Safe Communities International | Safety Beyond Borders</title>
+  <style>
+    /* General Styles */
+    body {
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height:1.6;
+      color:#222;
+      background-color:#f9f9f9;
+    }
+
+    /* Sticky header */
+    header {
+      background:#0b3c5d;
+      color:#fff;
+      padding:20px 40px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    header h1 { margin:0; font-size:26px; }
+    header img {
+  height:120px;        /* increased size */
+  width:auto;
+}
+
+    nav a { color:#fff; margin-left:20px; text-decoration:none; font-weight:bold; }
+
+    /* Hero Section */
+.hero {
+  background:#1f6f8b;
+  color:#fff;
+  padding:40px 40px;
+  text-align:center;
+  border-radius:0 0 15px 15px;
+  overflow:hidden;
+  position:relative;
+}
+
+.hero h2 {
+  font-size:26px; /* smaller size, matches logo/header */
+  margin-bottom:10px;
+  animation: floatText 4s ease-in-out infinite;
+}
+
+.hero p {
+  font-size:20px; /* slightly smaller than heading */
+  animation: floatText 4s ease-in-out infinite alternate;
+}
+
+/* Floating Animation */
+@keyframes floatText {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); } /* floats up */
+  100% { transform: translateY(0px); }  /* floats back down */
+}
+
+
+    /* Sections */
+    .section {
+      padding:60px 40px;
+      max-width:1100px;
+      margin:auto;
+    }
+    .section h2 { color:#0b3c5d; margin-bottom:15px; }
+
+    /* Services Section */
+    .services {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+      gap:20px;
+    }
+    .card {
+      background:#f5f5f5;
+      padding:25px;
+      border-radius:10px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    }
+    .card h3 { 
+      color:#e74c3c; /* safety red for emphasis */
+      margin-bottom:10px; 
+    }
+
+    /* Projects Section */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      gap: 20px;
+    }
+    .project-card {
+      background: #f5f5f5;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .project-card h3 {
+      color: #e67e22; /* orange/safety theme */
+      margin: 15px 0 10px 0;
+    }
+    .project-card p {
+      padding: 0 15px 15px 15px;
+      color: #333;
+      font-size: 14px;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+    /* Footer */
+    footer {
+      background:#0b3c5d;
+      color:#fff;
+      text-align:center;
+      padding:20px;
+      margin-top:40px;
+    }
+
+    /* Smooth scrolling for anchor links */
+/* Founders Message Section */
+.founders {
+  background:#f0f4f8;
+  border-left:6px solid #0b3c5d;
+  padding:40px;
+  border-radius:10px;
+}
+
+.founder-block {
+  margin-bottom:30px;
+}
+
+.founder-block h3 {
+  color:#0b3c5d;
+  margin-bottom:5px;
+}
+
+.founder-title {
+  font-weight:bold;
+  color:#e67e22;
+  margin-bottom:10px;
+}
+
+.founder-quote {
+  font-style:italic;
+  color:#333;
+  line-height:1.7;
+}
+
+.founders p {
+  margin-bottom:15px;
+}
+   
+ html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div style="display:flex; align-items:center;">
+    <img src="logo.png" alt="SCI Logo">
+    <div style="margin-left:15px;">
+      <h1>Safe Communities International</h1>
+      <small>Safety Beyond Borders</small>
+    </div>
+  </div>
+  <nav>
+    <a href="#overview">Overview</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <h2>Promoting Safety, Health & Community Resilience</h2>
+  <p>Building safer, healthier, and empowered communities worldwide.</p>
+</section>
+
+
+<!-- Company Overview -->
+<section id="overview" class="section">
+  <h2>Company Overview</h2>
+  <p>Safe Communities International (SCI) is a leading organization dedicated to advancing safety, health, security, and community resilience worldwide. We partner with institutions, industries, and communities to identify risks, strengthen capacity, and implement practical, evidence-based solutions that protect people, property, and the environment.</p>
+  <p>Guided by international best practices and local insights, SCI delivers safety solutions that transcend geographical, cultural, and organizational boundaries. Our programs focus on preventing accidents, enhancing emergency preparedness, and fostering sustainable, resilient communities.</p>
+  <p>Through strategic collaborations with organizations and stakeholders, SCI continues to scale its impact, drive innovation in safety solutions, and strengthen communities globally.</p>
+  <p>SCI – Safety Beyond Borders.</p>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="section">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Occupational Health & Safety (OHS)</h3>
+      <ul>
+        <li>Workplace risk assessments</li>
+        <li>HSE management systems</li>
+        <li>Safety audits and inspections</li>
+        <li>Incident investigation and reporting</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Community Safety & Awareness</h3>
+      <ul>
+        <li>Community safety training</li>
+        <li>Public health and safety campaigns</li>
+        <li>Road safety and emergency awareness</li>
+        <li>Youth and vulnerable group safety programs</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Emergency Preparedness & Response</h3>
+      <ul>
+        <li>Emergency response planning</li>
+        <li>Fire safety and evacuation planning</li>
+        <li>Disaster risk reduction (DRR)</li>
+        <li>First aid and lifesaving training</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Training & Capacity Building</h3>
+      <ul>
+        <li>Safety leadership training</li>
+        <li>HSE induction and toolbox talks</li>
+        <li>Contractor and worker safety training</li>
+        <li>Customized safety workshops</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Consultancy & Advisory Services</h3>
+      <ul>
+        <li>Safety policy development</li>
+        <li>Regulatory compliance support</li>
+        <li>Project safety advisory</li>
+        <li>Monitoring and evaluation</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="section">
+  <h2>Our Projects</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <img src="project1.jpg" alt="Project 1">
+      <h3>Community Safety Training</h3>
+      <p>Training communities on fire safety and first aid.</p>
+    </div>
+    <div class="project-card">
+      <img src="project2.jpg" alt="Project 2">
+      <h3>Workplace Safety Audit</h3>
+      <p>Audit and improve safety standards in construction sites.</p>
+    </div>
+    <div class="project-card">
+      <img src="project3.jpg" alt="Project 3">
+      <h3>Road Safety Campaign</h3>
+      <p>Public awareness campaign on road safety rules.</p>
+    </div>
+  </div>
+</section>
+<section id="founders" class="section">
+  <h2>Founders’ Message</h2>
+
+  <div class="founders">
+    <p>
+      At Safe Communities International (SCI), our work is driven by a shared conviction: Safety is not optional; it is foundational to sustainable development and resilient societies.
+    </p>
+
+    <div class="founder-block">
+      <h3>Anthony Onzima</h3>
+      <div class="founder-title">Co-Founder & Director – Risk, Safety and Resilience
+(Lead Risk Analyst & Strategic Safety Advisor)</div>
+      <p class="founder-quote">
+        “Across industries and communities, many losses are preventable. At SCI, we focus on
+        understanding risk before it becomes harm using data, standards, and practical
+        experience to design solutions that protect lives, assets, and the environment.
+        Our goal is to help organizations and communities move from reactive response to
+        proactive prevention.”
+      </p>
+    </div>
+
+    <div class="founder-block">
+      <h3>Eric Erutu</h3>
+      <div class="founder-title">Co-Founder & Director – Training, Capacity Building and Competence Development
+(Senior Training & Workforce Development Lead)</div>
+      <p class="founder-quote">
+        “Sustainable safety is achieved when people are empowered with the right knowledge,
+        skills, and mindset. At SCI, we believe training is not just about compliance; it is
+        about competence, confidence, and culture. When individuals are well trained, safety
+        becomes part of everyday decision-making.”
+      </p>
+    </div>
+
+    <p>
+      Together, the SCI leadership team brings technical expertise, field experience, and a
+      deep understanding of local and international safety challenges. This combination
+      enables SCI to deliver solutions that are practical, credible, and aligned with global
+      best practices while remaining grounded in real-world conditions.
+    </p>
+
+    <p><strong>SCI – Safety Beyond Borders.</strong></p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section">
+  <h2>Contact Us</h2>
+  <p>Email: info@safecommunitiesinternational.org</p>
+  <p>Phone 1: +256 704 032 231</p>
+  <p>Phone 2: +256 778 731 329</p>
+  <p>Location: Kampala, Uganda</p>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2026 Safe Communities International (SCI). All rights reserved.</p>
+</footer>
+
+</body>
+</html>

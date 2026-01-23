@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -203,6 +204,8 @@
       scroll-behavior: smooth;
     }
   </style>
+  <link rel="stylesheet" href="css/interactive.css">
+
 </head>
 <body>
 
@@ -423,6 +426,54 @@
     <p><strong>SCI – Safety Beyond Borders.</strong></p>
   </div>
 </section>
+<!-- HSE Dashboard -->
+<section id="hse-dashboard">
+  <h2>HSE Dashboard</h2>
+  <canvas id="hseChart" width="400" height="200"></canvas>
+</section>
+
+<!-- Interactive Risk Matrix -->
+<section id="risk-matrix">
+  <h2>Interactive Risk Matrix</h2>
+  <p style="text-align:center;">Click any cell to see the risk level</p>
+  <table>
+    <tr>
+      <th>Severity</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td class="low">Low</td><td class="low">Low</td><td class="medium">Medium</td><td class="medium">Medium</td><td class="high">High</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td class="low">Low</td><td class="medium">Medium</td><td class="medium">Medium</td><td class="high">High</td><td class="high">High</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td class="medium">Medium</td><td class="medium">Medium</td><td class="high">High</td><td class="high">High</td><td class="high">High</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td class="medium">Medium</td><td class="high">High</td><td class="high">High</td><td class="high">High</td><td class="high">High</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td class="high">High</td><td class="high">High</td><td class="high">High</td><td class="high">High</td><td class="high">High</td>
+    </tr>
+  </table>
+</section>
+
+<!-- Daily Safety Checklist -->
+<section id="hse-checklist">
+  <h2>Daily Safety Checklist</h2>
+  <ul>
+    <li><input type="checkbox"> Wear PPE correctly</li>
+    <li><input type="checkbox"> Check fire extinguishers</li>
+    <li><input type="checkbox"> Inspect machinery</li>
+    <li><input type="checkbox"> Clear work area of hazards</li>
+  </ul>
+  <button onclick="submitChecklist()">Submit Checklist</button>
+</section>
 
 <!-- Contact Section -->
 <section id="contact" class="section">
@@ -437,8 +488,11 @@
 <footer>
   <p>&copy; 2026 Safe Communities International (SCI). All rights reserved.</p>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/interactive.js"></script>
 
 </body>
 </html>
+
 
 

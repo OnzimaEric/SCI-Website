@@ -1,63 +1,56 @@
-/* Interactive HSE Styles */
-// js/interactive.js
-
-// HSE Dashboard Chart
-const ctx = document.getElementById('hseChart').getContext('2d');
-const hseChart = new Chart(ctx, {
-    type: 'bar', // change to 'line', 'pie', etc. if you want
-    data: {
-        labels: ['Incidents', 'Inspections', 'Training', 'Audits', 'Near Misses'],
-        datasets: [{
-            label: 'This Month',
-            data: [5, 12, 8, 6, 2], // example numbers, replace with real data
-            backgroundColor: [
-                '#e74c3c',
-                '#3498db',
-                '#f1c40f',
-                '#2ecc71',
-                '#9b59b6'
-            ]
-        }]
-    },
-    options: {
-        responsive: true,
-        plugins: {
-            legend: {
-                display: true,
-                position: 'top'
-            },
-            title: {
-                display: true,
-                text: 'HSE Dashboard - Example Data'
-            }
-        },
-        scales: {
-            y: {
-                beginAtZero: true,
-                title: {
-                    display: true,
-                    text: 'Count'
-                }
-            }
-        }
-    }
-});
-
-// Daily Checklist Button (example)
-function submitChecklist() {
-    alert('Checklist submitted! (Functionality to be implemented)');
+/* ===================== General Styles ===================== */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #f9f9f9;
 }
 
+.section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
 
+/* ===================== Header & Hero ===================== */
+header {
+  background: #0b3c5d;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header nav a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  background: #1f6f8b;
+  color: #fff;
+  text-align: center;
+  padding: 40px;
+  border-radius: 0 0 15px 15px;
+}
+
+/* ===================== HSE Dashboard, Risk Matrix & Checklist ===================== */
 #hse-dashboard, #risk-matrix, #hse-checklist {
   background: #f8f9fa;
   padding: 20px;
   margin: 20px 0;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  font-family: Arial, sans-serif;
 }
 
+/* HSE Dashboard title */
 #hse-dashboard h2,
 #risk-matrix h2,
 #hse-checklist h2 {
@@ -66,6 +59,7 @@ function submitChecklist() {
   margin-bottom: 15px;
 }
 
+/* ===================== Risk Matrix ===================== */
 #risk-matrix table {
   width: 100%;
   border-collapse: collapse;
@@ -85,11 +79,17 @@ function submitChecklist() {
 
 #risk-matrix td:hover { opacity: 0.8; }
 
-#hse-checklist ul { list-style: none; padding: 0; }
-#hse-checklist li {
-  margin: 10px 0;
-  font-size: 16px;
+/* ===================== Checklist ===================== */
+#hse-checklist ul { 
+  list-style: none; 
+  padding: 0; 
 }
+
+#hse-checklist li { 
+  margin: 10px 0; 
+  font-size: 16px; 
+}
+
 #hse-checklist button {
   margin-top: 10px;
   padding: 10px 15px;
@@ -99,4 +99,7 @@ function submitChecklist() {
   border-radius: 5px;
   cursor: pointer;
 }
-#hse-checklist button:hover { background: #457b9d; }
+
+#hse-checklist button:hover {
+  background: #457b9d;
+}

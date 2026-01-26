@@ -1,4 +1,53 @@
 /* Interactive HSE Styles */
+// js/interactive.js
+
+// HSE Dashboard Chart
+const ctx = document.getElementById('hseChart').getContext('2d');
+const hseChart = new Chart(ctx, {
+    type: 'bar', // change to 'line', 'pie', etc. if you want
+    data: {
+        labels: ['Incidents', 'Inspections', 'Training', 'Audits', 'Near Misses'],
+        datasets: [{
+            label: 'This Month',
+            data: [5, 12, 8, 6, 2], // example numbers, replace with real data
+            backgroundColor: [
+                '#e74c3c',
+                '#3498db',
+                '#f1c40f',
+                '#2ecc71',
+                '#9b59b6'
+            ]
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                display: true,
+                position: 'top'
+            },
+            title: {
+                display: true,
+                text: 'HSE Dashboard - Example Data'
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: 'Count'
+                }
+            }
+        }
+    }
+});
+
+// Daily Checklist Button (example)
+function submitChecklist() {
+    alert('Checklist submitted! (Functionality to be implemented)');
+}
+
 
 #hse-dashboard, #risk-matrix, #hse-checklist {
   background: #f8f9fa;

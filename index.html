@@ -275,65 +275,66 @@
 
   <!-- Interactive Risk Matrix -->
  <section id="risk-matrix">
-  <h2>Interactive Risk Matrix</h2>
-  <p style="text-align:center;">Click any cell to see the risk level and recommended action</p>
+  <h2>Interactive NEBOSH Risk Matrix</h2>
+  <p style="text-align:center;">Hover over any cell to see Likelihood & Severity. Click to see action.</p>
 
   <table id="matrix-table">
     <thead>
       <tr>
-        <th>Severity \ Likelihood</th>
-        <th>1</th>
-        <th>2</th>
-        <th>3</th>
-        <th>4</th>
-        <th>5</th>
+        <th>Probability \ Impact</th>
+        <th>Insignificant (1)</th>
+        <th>Minor (2)</th>
+        <th>Significant (3)</th>
+        <th>Major (4)</th>
+        <th>Severe (5)</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>1</td>
-        <td data-risk="Low" data-msg="Low risk: Monitor regularly" class="low">Low</td>
-        <td data-risk="Low" data-msg="Low risk: Monitor regularly" class="low">Low</td>
-        <td data-risk="Medium" data-msg="Medium risk: Review controls" class="medium">Medium</td>
-        <td data-risk="Medium" data-msg="Medium risk: Review controls" class="medium">Medium</td>
-        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
+        <td>5 Almost Certain</td>
+        <td data-rating="Medium 5" data-likelihood="5" data-severity="1" data-msg="Medium risk: Review controls" class="medium" title="Medium risk: Review controls">Medium 5</td>
+        <td data-rating="High 10" data-likelihood="5" data-severity="2" data-msg="High risk: Immediate review needed" class="high" title="High risk: Immediate review needed">High 10</td>
+        <td data-rating="Very High 15" data-likelihood="5" data-severity="3" data-msg="Very high risk: Urgent action required" class="very-high" title="Very high risk: Urgent action required">Very High 15</td>
+        <td data-rating="Extreme 20" data-likelihood="5" data-severity="4" data-msg="Extreme risk: Stop activity & control" class="extreme" title="Extreme risk: Stop activity & control">Extreme 20</td>
+        <td data-rating="Extreme 25" data-likelihood="5" data-severity="5" data-msg="Extreme risk: Stop activity & control" class="extreme" title="Extreme risk: Stop activity & control">Extreme 25</td>
       </tr>
       <tr>
-        <td>2</td>
-        <td data-risk="Low" data-msg="Low risk: Monitor regularly" class="low">Low</td>
-        <td data-risk="Medium" data-msg="Medium risk: Review controls" class="medium">Medium</td>
-        <td data-risk="Medium" data-msg="Medium risk: Review controls" class="medium">Medium</td>
-        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
-        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
+        <td>4 Likely</td>
+        <td data-rating="Medium 4" data-likelihood="4" data-severity="1" data-msg="Medium risk: Review controls" class="medium" title="Medium risk: Review controls">Medium 4</td>
+        <td data-rating="Medium 8" data-likelihood="4" data-severity="2" data-msg="Medium risk: Review controls" class="medium" title="Medium risk: Review controls">Medium 8</td>
+        <td data-rating="High 12" data-likelihood="4" data-severity="3" data-msg="High risk: Immediate review needed" class="high" title="High risk: Immediate review needed">High 12</td>
+        <td data-rating="Very High 16" data-likelihood="4" data-severity="4" data-msg="Very high risk: Urgent action required" class="very-high" title="Very high risk: Urgent action required">Very High 16</td>
+        <td data-rating="Extreme 20" data-likelihood="4" data-severity="5" data-msg="Extreme risk: Stop activity & control" class="extreme" title="Extreme risk: Stop activity & control">Extreme 20</td>
       </tr>
       <tr>
-        <td>3</td>
-        <td data-risk="Medium" data-msg="Medium risk: Review controls" class="medium">Medium</td>
-        <td data-risk="Medium" data-msg="Medium risk: Review controls" class="medium">Medium</td>
-        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
-        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
-        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
+        <td>3 Moderate</td>
+        <td data-rating="Low 3" data-likelihood="3" data-severity="1" data-msg="Low risk: Monitor regularly" class="low" title="Low risk: Monitor regularly">Low 3</td>
+        <td data-rating="Medium 6" data-likelihood="3" data-severity="2" data-msg="Medium risk: Review controls" class="medium" title="Medium risk: Review controls">Medium 6</td>
+        <td data-rating="Medium 9" data-likelihood="3" data-severity="3" data-msg="Medium risk: Review controls" class="medium" title="Medium risk: Review controls">Medium 9</td>
+        <td data-rating="High 12" data-likelihood="3" data-severity="4" data-msg="High risk: Immediate review needed" class="high" title="High risk: Immediate review needed">High 12</td>
+        <td data-rating="Very High 15" data-likelihood="3" data-severity="5" data-msg="Very high risk: Urgent action required" class="very-high" title="Very high risk: Urgent action required">Very High 15</td>
       </tr>
       <tr>
-        <td>4</td>
-        <td data-risk="Medium" data-msg="Medium risk: Review controls" class="medium">Medium</td>
-        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
-        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
-        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
-        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
+        <td>2 Unlikely</td>
+        <td data-rating="Very Low 2" data-likelihood="2" data-severity="1" data-msg="Very low risk: Routine monitoring" class="very-low" title="Very low risk: Routine monitoring">Very Low 2</td>
+        <td data-rating="Low 4" data-likelihood="2" data-severity="2" data-msg="Low risk: Monitor regularly" class="low" title="Low risk: Monitor regularly">Low 4</td>
+        <td data-rating="Medium 6" data-likelihood="2" data-severity="3" data-msg="Medium risk: Review controls" class="medium" title="Medium risk: Review controls">Medium 6</td>
+        <td data-rating="Medium 8" data-likelihood="2" data-severity="4" data-msg="Medium risk: Review controls" class="medium" title="Medium risk: Review controls">Medium 8</td>
+        <td data-rating="High 10" data-likelihood="2" data-severity="5" data-msg="High risk: Immediate review needed" class="high" title="High risk: Immediate review needed">High 10</td>
       </tr>
       <tr>
-        <td>5</td>
-        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
-        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
-        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
-        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
-        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
+        <td>1 Rare</td>
+        <td data-rating="Very Low 1" data-likelihood="1" data-severity="1" data-msg="Very low risk: Routine monitoring" class="very-low" title="Very low risk: Routine monitoring">Very Low 1</td>
+        <td data-rating="Very Low 2" data-likelihood="1" data-severity="2" data-msg="Very low risk: Routine monitoring" class="very-low" title="Very low risk: Routine monitoring">Very Low 2</td>
+        <td data-rating="Low 3" data-likelihood="1" data-severity="3" data-msg="Low risk: Monitor regularly" class="low" title="Low risk: Monitor regularly">Low 3</td>
+        <td data-rating="Medium 4" data-likelihood="1" data-severity="4" data-msg="Medium risk: Review controls" class="medium" title="Medium risk: Review controls">Medium 4</td>
+        <td data-rating="Medium 5" data-likelihood="1" data-severity="5" data-msg="Medium risk: Review controls" class="medium" title="Medium risk: Review controls">Medium 5</td>
       </tr>
     </tbody>
   </table>
 
-  <div id="risk-message" style="text-align:center; margin-top:15px; font-weight:bold; font-size:1.1em;"></div>
+  <!-- Popup for cell info -->
+  <div id="popup" style="position:absolute; display:none; background:#fff; border:1px solid #333; padding:8px 12px; border-radius:4px; font-weight:bold; z-index:1000; pointer-events:none;"></div>
 </section>
 
 <style>
@@ -348,25 +349,51 @@
     cursor: pointer;
     font-weight: bold;
     transition: transform 0.1s;
+    position: relative;
   }
-  #matrix-table td.low { background-color: #28a745; color: white; }
-  #matrix-table td.medium { background-color: #ffc107; color: black; }
-  #matrix-table td.high { background-color: #dc3545; color: white; }
   #matrix-table td:hover { transform: scale(1.05); }
+
+  /* Colors */
+  .very-low { background-color: #28a745; color: white; }   /* Green */
+  .low { background-color: #71c566; color: white; }        /* Light Green */
+  .medium { background-color: #ffc107; color: black; }     /* Yellow */
+  .high { background-color: #fd7e14; color: white; }       /* Orange */
+  .very-high { background-color: #dc3545; color: white; }  /* Red */
+  .extreme { background-color: #8b0000; color: white; }    /* Dark Red */
 </style>
 
 <script>
-  const cells = document.querySelectorAll('#matrix-table td');
-  const messageDiv = document.getElementById('risk-message');
+const cells = document.querySelectorAll('#matrix-table td');
+const popup = document.getElementById('popup');
 
-  cells.forEach(cell => {
-    cell.addEventListener('click', () => {
-      const riskLevel = cell.dataset.risk;
-      const msg = cell.dataset.msg;
-      messageDiv.textContent = `Risk Level: ${riskLevel} — ${msg}`;
-    });
+cells.forEach(cell => {
+  // Show popup on click
+  cell.addEventListener('click', (e) => {
+    const rating = cell.dataset.rating;
+    const msg = cell.dataset.msg;
+    const likelihood = cell.dataset.likelihood;
+    const severity = cell.dataset.severity;
+
+    popup.style.display = 'block';
+    popup.style.left = (e.pageX + 10) + 'px';
+    popup.style.top = (e.pageY + 10) + 'px';
+    popup.innerHTML = `
+      <div>Risk Rating: ${rating}</div>
+      <div>Likelihood: ${likelihood}</div>
+      <div>Severity: ${severity}</div>
+      <div>Action: ${msg}</div>
+    `;
   });
+
+  // Remove popup if clicking anywhere else
+  document.addEventListener('click', (e) => {
+    if (!cell.contains(e.target)) {
+      popup.style.display = 'none';
+    }
+  });
+});
 </script>
+
 
   <!-- Daily Safety Checklist -->
   <section id="hse-checklist">
@@ -398,6 +425,7 @@
 
 </body>
 </html>
+
 
 
 

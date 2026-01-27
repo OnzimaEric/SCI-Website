@@ -274,18 +274,99 @@
   </section>
 
   <!-- Interactive Risk Matrix -->
-  <section id="risk-matrix">
-    <h2>Interactive Risk Matrix</h2>
-    <p style="text-align:center;">Click any cell to see the risk level</p>
-    <table>
-      <tr><th>Severity</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr>
-      <tr><td>1</td><td class="low">Low</td><td class="low">Low</td><td class="medium">Medium</td><td class="medium">Medium</td><td class="high">High</td></tr>
-      <tr><td>2</td><td class="low">Low</td><td class="medium">Medium</td><td class="medium">Medium</td><td class="high">High</td><td class="high">High</td></tr>
-      <tr><td>3</td><td class="medium">Medium</td><td class="medium">Medium</td><td class="high">High</td><td class="high">High</td><td class="high">High</td></tr>
-      <tr><td>4</td><td class="medium">Medium</td><td class="high">High</td><td class="high">High</td><td class="high">High</td><td class="high">High</td></tr>
-      <tr><td>5</td><td class="high">High</td><td class="high">High</td><td class="high">High</td><td class="high">High</td><td class="high">High</td></tr>
-    </table>
-  </section>
+ <section id="risk-matrix">
+  <h2>Interactive Risk Matrix</h2>
+  <p style="text-align:center;">Click any cell to see the risk level and recommended action</p>
+
+  <table id="matrix-table">
+    <thead>
+      <tr>
+        <th>Severity \ Likelihood</th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td data-risk="Low" data-msg="Low risk: Monitor regularly" class="low">Low</td>
+        <td data-risk="Low" data-msg="Low risk: Monitor regularly" class="low">Low</td>
+        <td data-risk="Medium" data-msg="Medium risk: Review controls" class="medium">Medium</td>
+        <td data-risk="Medium" data-msg="Medium risk: Review controls" class="medium">Medium</td>
+        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td data-risk="Low" data-msg="Low risk: Monitor regularly" class="low">Low</td>
+        <td data-risk="Medium" data-msg="Medium risk: Review controls" class="medium">Medium</td>
+        <td data-risk="Medium" data-msg="Medium risk: Review controls" class="medium">Medium</td>
+        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
+        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td data-risk="Medium" data-msg="Medium risk: Review controls" class="medium">Medium</td>
+        <td data-risk="Medium" data-msg="Medium risk: Review controls" class="medium">Medium</td>
+        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
+        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
+        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td data-risk="Medium" data-msg="Medium risk: Review controls" class="medium">Medium</td>
+        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
+        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
+        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
+        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
+        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
+        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
+        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
+        <td data-risk="High" data-msg="High risk: Immediate action required" class="high">High</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div id="risk-message" style="text-align:center; margin-top:15px; font-weight:bold; font-size:1.1em;"></div>
+</section>
+
+<style>
+  #matrix-table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #matrix-table th, #matrix-table td {
+    border: 1px solid #333;
+    padding: 12px 18px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.1s;
+  }
+  #matrix-table td.low { background-color: #28a745; color: white; }
+  #matrix-table td.medium { background-color: #ffc107; color: black; }
+  #matrix-table td.high { background-color: #dc3545; color: white; }
+  #matrix-table td:hover { transform: scale(1.05); }
+</style>
+
+<script>
+  const cells = document.querySelectorAll('#matrix-table td');
+  const messageDiv = document.getElementById('risk-message');
+
+  cells.forEach(cell => {
+    cell.addEventListener('click', () => {
+      const riskLevel = cell.dataset.risk;
+      const msg = cell.dataset.msg;
+      messageDiv.textContent = `Risk Level: ${riskLevel} — ${msg}`;
+    });
+  });
+</script>
 
   <!-- Daily Safety Checklist -->
   <section id="hse-checklist">
@@ -317,5 +398,6 @@
 
 </body>
 </html>
+
 
 

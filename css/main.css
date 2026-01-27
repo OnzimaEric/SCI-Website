@@ -149,4 +149,15 @@ footer {
   text-align: center;
   padding: 20px;
 }
+.matrix-tooltip {
+    position: absolute;
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    z-index: 999;
+    pointer-events: none;
+    white-space: nowrap;
+}
 

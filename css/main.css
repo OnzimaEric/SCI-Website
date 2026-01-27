@@ -1,1 +1,152 @@
+/* ===============================
+   SCI – Modern Clean Styles
+   =============================== */
+
+:root {
+  --primary: #0b3c5d;
+  --secondary: #1f6f8b;
+  --accent: #e67e22;
+  --light: #f5f7fa;
+  --dark: #222;
+}
+
+/* Base */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.7;
+  color: var(--dark);
+  background: #f9f9f9;
+}
+
+h1, h2, h3 {
+  color: var(--primary);
+}
+
+.section {
+  padding: 60px 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  background: var(--primary);
+  color: #fff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header img {
+  height: 80px;
+}
+
+nav a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* Cards */
+.services,
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card,
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  transition: transform .3s;
+}
+
+.card:hover,
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Risk Matrix */
+#matrix-table {
+  border-collapse: collapse;
+  margin: 30px auto;
+  text-align: center;
+}
+
+#matrix-table th,
+#matrix-table td {
+  border: 1px solid #333;
+  padding: 14px 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Risk colors */
+.very-low { background:#2ecc71; color:#fff; }
+.low { background:#7bed9f; }
+.medium { background:#feca57; }
+.high { background:#ff9f43; color:#fff; }
+.very-high { background:#ee5253; color:#fff; }
+.extreme { background:#8b0000; color:#fff; }
+
+/* Popup */
+#popup {
+  position: absolute;
+  display: none;
+  background: #fff;
+  border: 1px solid #333;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  z-index: 2000;
+  pointer-events: none;
+}
+
+/* Checklist */
+.checklist-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.checklist-container li {
+  margin-bottom: 10px;
+}
+
+button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--secondary);
+}
+
+/* Footer */
+footer {
+  background: var(--primary);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
 

@@ -397,15 +397,73 @@ cells.forEach(cell => {
 
   <!-- Daily Safety Checklist -->
   <section id="hse-checklist">
-    <h2>Daily Safety Checklist</h2>
+  <h2>SCI Daily Safety Checklist</h2>
+  <p class="checklist-intro">
+    Welcome to your daily safety check! Each tick you make protects <strong>you, your colleagues, your family, and your community.</strong>
+    Safety is everywhere – at home, on the road, on construction sites, in offices, farms, hotels, or oil & gas facilities. Completing this checklist helps you reduce risks, prevent accidents, and keep your world safe.
+  </p>
+
+  <div class="checklist-container">
+    <!-- Personal & Ergonomic Safety -->
+    <h3>Personal & Ergonomic Safety 🧍‍♂️</h3>
     <ul>
-      <li><input type="checkbox"> Wear PPE correctly</li>
-      <li><input type="checkbox"> Check fire extinguishers</li>
-      <li><input type="checkbox"> Inspect machinery</li>
-      <li><input type="checkbox"> Clear work area of hazards</li>
+      <li><input type="checkbox" id="ppe"><label for="ppe">Wear PPE correctly – protect yourself from hazards</label></li>
+      <li><input type="checkbox" id="hydration"><label for="hydration">Stay hydrated – fatigue increases risks</label></li>
+      <li><input type="checkbox" id="ergonomics"><label for="ergonomics">Use proper posture & lifting techniques – prevent injuries</label></li>
+      <li><input type="checkbox" id="rest"><label for="rest">Take short breaks – refresh your mind & body</label></li>
     </ul>
-    <button onclick="submitChecklist()">Submit Checklist</button>
-  </section>
+
+    <!-- Fire & Emergency Preparedness -->
+    <h3>Fire & Emergency 🔥</h3>
+    <ul>
+      <li><input type="checkbox" id="fire-ext"><label for="fire-ext">Check fire extinguishers & alarms – be ready for emergencies</label></li>
+      <li><input type="checkbox" id="emergency-exit"><label for="emergency-exit">Ensure emergency exits are clear – protect everyone</label></li>
+      <li><input type="checkbox" id="first-aid"><label for="first-aid">Verify first aid kits are stocked – your quick action saves lives</label></li>
+    </ul>
+
+    <!-- Industrial & Workplace Safety -->
+    <h3>Industrial & Workplace Safety 🏗️</h3>
+    <ul>
+      <li><input type="checkbox" id="machinery"><label for="machinery">Inspect machinery & tools – avoid accidents</label></li>
+      <li><input type="checkbox" id="lockout"><label for="lockout">Follow lockout/tagout procedures – prevent injuries</label></li>
+      <li><input type="checkbox" id="housekeeping"><label for="housekeeping">Keep work area tidy – reduce slips, trips, and falls</label></li>
+      <li><input type="checkbox" id="lighting"><label for="lighting">Check lighting – clear vision prevents accidents</label></li>
+    </ul>
+
+    <!-- Road & Community Safety -->
+    <h3>Road & Community Safety 🚦</h3>
+    <ul>
+      <li><input type="checkbox" id="seatbelt"><label for="seatbelt">Wear seatbelt & drive safely – protect yourself & others</label></li>
+      <li><input type="checkbox" id="pedestrian"><label for="pedestrian">Watch for pedestrians & cyclists – community safety matters</label></li>
+      <li><input type="checkbox" id="speed"><label for="speed">Follow speed limits – avoid accidents</label></li>
+    </ul>
+
+    <!-- Agricultural & Outdoor Safety 🌾 -->
+    <h3>Agricultural & Outdoor Safety 🌾</h3>
+    <ul>
+      <li><input type="checkbox" id="tools"><label for="tools">Inspect farming equipment – prevent injuries</label></li>
+      <li><input type="checkbox" id="chemicals"><label for="chemicals">Handle chemicals & fertilizers safely – protect yourself & environment</label></li>
+      <li><input type="checkbox" id="sun-protection"><label for="sun-protection">Wear sun protection – prevent heatstroke</label></li>
+    </ul>
+
+    <!-- Behavioral Safety & Mindfulness -->
+    <h3>Behavioral Safety & Mindfulness 🧠</h3>
+    <ul>
+      <li><input type="checkbox" id="hazard-report"><label for="hazard-report">Report unsafe conditions – your action saves lives</label></li>
+      <li><input type="checkbox" id="team-communication"><label for="team-communication">Communicate safety concerns – teamwork prevents accidents</label></li>
+      <li><input type="checkbox" id="training"><label for="training">Attend safety briefings & trainings – knowledge is protection</label></li>
+      <li><input type="checkbox" id="mindful"><label for="mindful">Stay alert & mindful – your focus protects everyone</label></li>
+    </ul>
+  </div>
+
+  <button onclick="submitChecklist()">Submit Checklist ✅</button>
+
+  <p class="checklist-significance">
+    <strong>Why it matters:</strong> Every tick reduces your personal risk, strengthens community safety, and ensures that your workplace, home, and neighborhood remain secure. 
+    Checked items show that hazards are controlled and risks are minimized – safety is in your hands. Remember: <strong>what you protect today protects everyone tomorrow.</strong>
+  </p>
+</section>
+
 
   <!-- Contact Section -->
   <section id="contact" class="section">
@@ -425,6 +483,7 @@ cells.forEach(cell => {
 
 </body>
 </html>
+
 
 
 
